@@ -27,8 +27,8 @@ const getPhrase = async () => {
     const difficulty = document.getElementById('difficulty').value;
 
     const params = new URLSearchParams();
-    params.append("topic", topic || "vida-cotidiana-familia");
-    params.append("level", level || "preescolar");
+    params.append("topic", topic || "daily-life-family");
+    params.append("level", level || "preschool");
     params.append("difficulty", difficulty || "easy");
 
     try {
