@@ -230,8 +230,6 @@ const toggleButtons = () => {
 }
 
 const highlightWord = (text) => {
-    console.log(text);
-    console.log(this.word);
     const regex = new RegExp(`(${this.word})`, 'gi');
     return text.replace(regex, `<span class="light">$1</span>`);
 };
