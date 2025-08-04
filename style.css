@@ -364,15 +364,15 @@ body {
 .action {
     width: 48%;
     min-width: 200px;
-    background-color: white;
-    font-family: system-ui;
-    font-size: 14px;
     padding: 7px;
+    background-color: white;
     border: 0.5px solid #7ca4fc;
     border-radius: 10px;
     box-shadow: 3px 3px 0px 0 rgb(22, 22, 22);
+    font-family: system-ui;
+    font-size: 14px;
     text-align: center;
-    color: #c2c2c2;
+    color: #155DFC;
     font-weight: 600;
     cursor: pointer;
     transition: 
@@ -387,8 +387,8 @@ body {
 }
 
 .action:hover, .action__select {
-    background-color: #b8cfff;
-    color: #b6b6b6;
+    background-color: #c9daff;
+    color: #8a8a8a;
 }
 
 .action__select {
