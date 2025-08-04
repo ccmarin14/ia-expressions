@@ -273,9 +273,10 @@ body {
 }
 
 .definition-text {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
     height: 60px;
-    vertical-align: middle;
-    margin-top: 10px;
 }
 
 .actions-container {
