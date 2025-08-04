@@ -90,6 +90,7 @@ const mountModal = (word, data) => {
     modalLoader.classList.add("no-display");
     modalLoading.forEach(loading => loading.classList.remove("no-display"));
     containerExpression.innerHTML = `<span><b>Expresión original:</b><div class="expression-text">${this.expression}<div>`;
+    actionPhraseAlternative.innerHTML = `Frase con <mark>${word}</mark>`;
 }
 
 const cleanModal = () => {
@@ -98,6 +99,7 @@ const cleanModal = () => {
     responseLabel.textContent = "";
     responseText.innerHTML = "";
     lastAction = "";
+    actionPhraseAlternative.innerHTML = "";
     cleanSelectAction();
     updateResponse.classList.add("no-display");
     responseLabel.innerHTML = "Selecciona una acción para generar texto a partir de la palabra elegida y su expresión";
