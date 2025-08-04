@@ -193,7 +193,7 @@ const determineLabel = (response_type) => {
         case "antonyms":
             return "Antónimos:";
         case "phrase_alternative":
-            return "Frase alternativa:";
+            return `Frase con "${word}"`;
         case "phrase_equivalent":
             return "Frase equivalente:";
         default:
