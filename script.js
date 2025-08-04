@@ -11,7 +11,6 @@ const updateDefinition = document.querySelector(".update__definition");
 const responseLabel = document.querySelector(".response-label");
 const responseText = document.querySelector(".response-text");
 const updateResponse = document.querySelector(".update__response");
-const actionEquivalence = document.querySelector(".action__equivalence");
 const actionSynonym = document.querySelector(".action__synonym");
 const actionPhraseAlternative = document.querySelector(".action__phrase__alternative");
 const actionPhraseEquivalent = document.querySelector(".action__phrase__equivalence");
@@ -235,7 +234,6 @@ const extractPhrase = (data) => {
 const toggleButtons = () => {
     updateDefinition.classList.toggle("disabled");
     updateResponse.classList.toggle("disabled");
-    actionEquivalence.classList.toggle("disabled");
     actionSynonym.classList.toggle("disabled");
     actionPhraseAlternative.classList.toggle("disabled");
     actionPhraseEquivalent.classList.toggle("disabled");
@@ -258,7 +256,6 @@ const cleanSelectAction = () => {
 
 updateDefinition.addEventListener('click', () => updateDefinitionText());
 updateResponse.addEventListener('click', () => updateResponseValues(responseType));
-actionEquivalence.addEventListener('click', (event) => updateResponseValues("equivalences", event.currentTarget));
 actionSynonym.addEventListener('click', (event) => updateResponseValues("synonyms", event.currentTarget));
 actionPhraseAlternative.addEventListener('click', (event) => updateResponseValues("phrase_alternative", event.currentTarget));
 actionPhraseEquivalent.addEventListener('click', (event) => updateResponseValues("phrase_equivalent", event.currentTarget));
