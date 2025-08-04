@@ -89,7 +89,7 @@ const mountModal = (word, data) => {
     modalLoader.classList.add("no-display");
     modalLoading.forEach(loading => loading.classList.remove("no-display"));
     containerExpression.innerHTML = `<span><b>Expresión original:</b><div class="expression-text">${this.expression}<div>`;
-    actionPhraseAlternative.innerHTML = `Frase con <mark>${word}</mark>`;
+    actionPhraseAlternative.innerHTML = `Frase con <u>${word}</u>`;
 }
 
 const cleanModal = () => {
