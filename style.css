@@ -299,9 +299,9 @@ body {
 
 .response {
     height: 62%;
-    width: 86%;
+    width: 82%;
     margin: 0 25px;
-    padding: 10px 10px 0 10px;
+    padding: 20px 20px 0 20px;
     background-color: #eff1f3;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -310,7 +310,7 @@ body {
 }
 
 .response-label {
-    margin-bottom: 5px;
+    line-height: 25px;
 }
 
 .response__before {
