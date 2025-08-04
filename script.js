@@ -15,6 +15,7 @@ const actionEquivalence = document.querySelector(".action__equivalence");
 const actionSynonym = document.querySelector(".action__synonym");
 const actionPhraseAlternative = document.querySelector(".action__phrase__alternative");
 const actionPhraseEquivalent = document.querySelector(".action__phrase__equivalence");
+const containerExpression = document.querySelector(".expression");
 let word, expression, responseType, lastAction;
 let phraseCurrent = "";
 
@@ -86,6 +87,7 @@ const mountModal = (word, data) => {
     definitionText.textContent = data.definition;
     modalLoader.classList.add("no-display");
     modalLoading.forEach(loading => loading.classList.remove("no-display"));
+    containerExpression.innerHTML = `<span><b>Expresión:</b> ${expression}`;
 }
 
 const cleanModal = () => {
