@@ -366,7 +366,7 @@ body {
     min-width: 200px;
     padding: 7px;
     background-color: white;
-    border: 0.5px solid #7ca4fc;
+    border: 0.5px solid #9facc9;
     border-radius: 10px;
     box-shadow: 3px 3px 0px 0 rgb(22, 22, 22);
     font-family: system-ui;
@@ -387,8 +387,8 @@ body {
 }
 
 .action:hover, .action__select {
-    background-color: #c9daff;
-    color: #8a8a8a;
+    background-color: #dae6ff;
+    color: #707070;
 }
 
 .action__select {
