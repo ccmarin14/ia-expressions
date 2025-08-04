@@ -87,7 +87,7 @@ const mountModal = (word, data) => {
     definitionText.textContent = data.definition;
     modalLoader.classList.add("no-display");
     modalLoading.forEach(loading => loading.classList.remove("no-display"));
-    containerExpression.innerHTML = `<span><b>Expresión:</b> ${expression}`;
+    containerExpression.innerHTML = `<span><b>Expresión:</b> ${this.expression}`;
 }
 
 const cleanModal = () => {
@@ -101,6 +101,7 @@ const cleanModal = () => {
     responseLabel.innerHTML = "Selecciona una acción para generar texto a partir de la palabra elegida y su expresión";
     modalLoading.forEach(loading => loading.classList.add("no-display"));
     modalLoader.classList.remove("no-display");
+    containerExpression.innerHTML = "";
 }
 
 const loadModal = async (word, expression) => {
