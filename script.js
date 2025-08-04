@@ -1,4 +1,4 @@
-const url = "https://gmatest-n8n.master2000.net"
+const url = "https://gma-n8n.master2000.net"
 const phraseContainer = document.querySelector(".phrase-container");
 const buttonGenerator = document.querySelector(".buttonGen");
 const buttonGenIcon = buttonGenerator.querySelector(".buttonGen__icon");
