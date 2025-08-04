@@ -167,6 +167,7 @@ body {
     height: 30px;
     padding: 20px;
     background-color: #155DFC;
+    font-family: system-ui;
     font-size: 14px;
     font-weight: 500;
     color: white;
@@ -364,14 +365,15 @@ body {
     width: 48%;
     min-width: 200px;
     background-color: white;
+    font-family: system-ui;
     font-size: 14px;
     padding: 7px;
     border: 0.5px solid #7ca4fc;
     border-radius: 10px;
     box-shadow: 3px 3px 0px 0 rgb(22, 22, 22);
-    text-align: start;
-    color: #155DFC;
-    font-weight: 500;
+    text-align: center;
+    color: #c2c2c2;
+    font-weight: 600;
     cursor: pointer;
     transition: 
         transform 0.08s cubic-bezier(.4,0,.2,1),
@@ -385,6 +387,11 @@ body {
 }
 
 .action:hover, .action__select {
+    background-color: #b8cfff;
+    color: #b6b6b6;
+}
+
+.action__select {
     background-color: #155DFC;
     color: white;
 }
