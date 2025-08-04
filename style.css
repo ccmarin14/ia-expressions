@@ -312,12 +312,12 @@ body {
 }
 
 .response {
-    height: 70%;
-    width: 80%;
+    height: 65%;
+    width: 86%;
     margin: 0 25px;
     padding: 10px 10px 0 10px;
     background-color: #eff1f3;
-    border: 1.5px dashed #cdd9eb;
+    border: 3px dashed #cdd9eb;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -354,6 +354,10 @@ body {
 .update__response {
     bottom: 15px;
     right: 15px;
+}
+
+.expression-text {
+    margin-top: 10px;
 }
 
 .modal-loader {
