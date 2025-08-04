@@ -302,10 +302,12 @@ body {
     justify-content: flex-start;
     align-items: center;
     height: 15%;
-    margin: 0 25px;
-    font-size: 15px;
+    width: 90%;
+    padding: 0 25px;
+    font-size: 14px;
     font-weight: 500;
-    color: #222222;
+    text-align: start;
+    color: #3c485c;
 }
 
 .response {
