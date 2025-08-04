@@ -310,6 +310,7 @@ body {
 
 .response-label {
     line-height: 25px;
+    text-decoration: underline #155DFC;
 }
 
 .response__before {
