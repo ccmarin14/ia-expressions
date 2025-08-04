@@ -120,6 +120,7 @@ const updateDefinitionText = async () => {
         definitionText.textContent = "No se pudo obtener la definición.";
     }
     toggleButtons();
+    updateDefinition.classList.remove("icon-loader");
 }
 
 const updateResponseValues = async (response_type, event) => {
@@ -230,6 +231,8 @@ const toggleButtons = () => {
 }
 
 const highlightWord = (text) => {
+    console.log(text);
+    console.log(this.word);
     const regex = new RegExp(`(${this.word})`, 'gi');
     return text.replace(regex, `<span class="light">$1</span>`);
 };
