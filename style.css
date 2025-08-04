@@ -246,15 +246,15 @@ body {
 }
 
 .information-container {
+    display: flex;
+    flex-direction: column;
     min-width: 100%;
     height: 190px;
-    display: flex;
 }
 
 .definition {
     position: relative;
-    width: 65%;
-    padding: 30px 10px 5px 25px;
+    padding: 30px 25px 5px 25px;
     font-size: 14px;
     font-weight: 500;
     text-align: start;
@@ -277,11 +277,11 @@ body {
 
 .actions-container {
     display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    gap: 5px;
+    justify-content: space-between;
     align-items: start;
-    width: 35%;
-    padding: 20px 20px 5px 0;
+    padding: 5px 25px 5px 25px;
 }
 
 .response-container {
@@ -361,7 +361,8 @@ body {
 }
 
 .action {
-    width: 150px;
+    width: 48%;
+    min-width: 200px;
     background-color: white;
     font-size: 14px;
     padding: 7px;
