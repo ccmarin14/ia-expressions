@@ -341,6 +341,7 @@ body {
 
 .expression-text {
     margin-top: 5px;
+    font-style: italic;
 }
 
 .update {
