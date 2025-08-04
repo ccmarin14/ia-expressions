@@ -346,9 +346,9 @@ body {
 
 .update {
     position: absolute;
-    padding: 0px 6px 2px 6px;
+    padding: 0 4.5px 1px 8.3px;
     background-color: white !important;
-    border-radius: 20px;
+    border-radius: 23px;
     font-size: 28px;
     font-weight: bold;
     cursor: pointer;
