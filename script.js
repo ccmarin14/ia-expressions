@@ -16,6 +16,8 @@ const actionSynonym = document.querySelector(".action__synonym");
 const actionPhraseAlternative = document.querySelector(".action__phrase__alternative");
 const actionPhraseEquivalent = document.querySelector(".action__phrase__equivalence");
 const containerExpression = document.querySelector(".expression");
+const responseBefore = document.querySelector(".response__before");
+const responseAfter = document.querySelector(".response__after");
 let word, expression, responseType, lastAction;
 let phraseCurrent = "";
 
@@ -100,8 +102,10 @@ const cleanModal = () => {
     updateResponse.classList.add("no-display");
     responseLabel.innerHTML = "Selecciona una acción para generar texto a partir de la palabra elegida y su expresión";
     modalLoading.forEach(loading => loading.classList.add("no-display"));
-    modalLoader.classList.remove("no-display");
     containerExpression.innerHTML = "";
+    modalLoader.classList.remove("no-display");
+    responseBefore.classList.remove("no-display");
+    responseAfter.classList.add("no-display");
 }
 
 const loadModal = async (word, expression) => {
@@ -135,8 +139,10 @@ const updateResponseValues = async (response_type, event) => {
     cleanSelectAction();
     toggleButtons();
 
-    updateResponse.classList.contains("no-display") && updateResponse.classList.remove("no-display");
+    responseBefore.classList.add("no-display");
     updateResponse.classList.add("icon-loader");
+    responseAfter.classList.remove("no-display");
+    updateResponse.classList.contains("no-display") && updateResponse.classList.remove("no-display");
     responseLabel.innerHTML = "Cargando...";
     responseText.innerHTML = "";
     responseType = response_type;

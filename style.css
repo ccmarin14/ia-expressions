@@ -312,15 +312,26 @@ body {
 }
 
 .response {
-    position: relative;
     height: 70%;
     width: 86%;
     margin: 0 25px;
     padding: 10px 10px 0 10px;
-    background-color: #FAFCFE;
+    background-color: #e8eaee;
     border: 1px solid #cdd9eb;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.response__before {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #bdbdbd;
+}
+
+.response__after {
+    position: relative;
 }
 
 .update {
