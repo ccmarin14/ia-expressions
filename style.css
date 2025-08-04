@@ -313,6 +313,7 @@ body {
 .response {
     position: relative;
     height: 70%;
+    width: 86%;
     margin: 0 25px;
     padding: 10px 10px 0 10px;
     background-color: #FAFCFE;
