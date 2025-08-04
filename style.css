@@ -74,7 +74,7 @@ body {
     width: 85%;
     height: 45%;
     padding: 10px;
-    background-color: #F9FAFB;
+    background-color: #eff1f3;
     border-left: 5px solid #2B7FFF;
     border-radius: 10px;
     color: #364153;
@@ -288,7 +288,7 @@ body {
 .response-container {
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     gap: 10px;
     min-width: 100%;
@@ -313,11 +313,11 @@ body {
 
 .response {
     height: 70%;
-    width: 86%;
+    width: 80%;
     margin: 0 25px;
     padding: 10px 10px 0 10px;
-    background-color: #e8eaee;
-    border: 1px solid #cdd9eb;
+    background-color: #eff1f3;
+    border: 1.5px dashed #cdd9eb;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -328,6 +328,7 @@ body {
     align-items: center;
     justify-content: center;
     color: #bdbdbd;
+    text-align: center;
 }
 
 .response__after {
