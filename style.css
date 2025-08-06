@@ -379,7 +379,7 @@ body {
 }
 
 .no-display {
-    display: none;
+    display: none !important;
 }
 
 .icon-loader {
@@ -444,6 +444,29 @@ body {
     padding: 0px 6px 4px 6px;
     background-color: #7db0fd;
     border-radius: 10px;
+}
+
+.server-select {
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 200px;
+    top: 10px;
+    left: 20px;
+}
+
+.server-select * {
+    width: 100%;
+    padding: 0 !important;
+    margin: 0 !important;
+    outline: 0;
+    border: 0;
+}
+
+.server-select select, .server-select input {
+    outline: solid 1px rgb(105, 105, 105);
 }
 
 

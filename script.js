@@ -1,4 +1,3 @@
-const url = "https://gma-n8n.master2000.net"
 const phraseContainer = document.querySelector(".phrase-container");
 const buttonGenerator = document.querySelector(".buttonGen");
 const buttonGenIcon = buttonGenerator.querySelector(".buttonGen__icon");
@@ -17,10 +16,17 @@ const actionPhraseEquivalent = document.querySelector(".action__phrase__equivale
 const containerExpression = document.querySelector(".expression");
 const responseBefore = document.querySelector(".response__before");
 const responseAfter = document.querySelector(".response__after");
-let word, expression, responseType, lastAction;
-let phraseCurrent = "";
+const serverSelect = document.querySelector(".server-select");
+const serverList = document.getElementById("server-list");
+const buttonAddServer = document.getElementById("add-server");
+const urls = [
+    {label: "gma-n8n", value: "https://gma-n8n.master2000.net"},
+    {label: "gmatest-n8n", value: "https://gmatest-n8n.master2000.net"},
+];
+let word, expression, responseType, lastAction, phraseCurrent;
 
 const getPhrase = async () => {
+    const url = serverList.value;
     const path = "/webhook/phrase-generator";
     const auth = "FVoU2qU+7I6qJ74r]P}";
 
@@ -53,6 +59,7 @@ const getPhrase = async () => {
 }
 
 const getTranslate = async (word, expression, response_type) => {
+    const url = serverList.value;
     const path = "/webhook/vocabulary";
     const auth = "5,F0nB8@M9S]a<ri<Fsp";
 
@@ -240,8 +247,6 @@ const toggleButtons = () => {
 }
 
 const highlightWord = (text) => {
-    console.log(text);
-    console.log(this.word);
     const regex = new RegExp(`(${this.word})`, 'gi');
     return text.replace(regex, `<span class="light">$1</span>`);
 };
@@ -254,11 +259,36 @@ const cleanSelectAction = () => {
     });
 }
 
+const showMenuServer = () => {
+    serverSelect.classList.remove("no-display");
+}
+
+const addServer = (event) => {
+    const form = event.target.form;
+    const serverUrl = form["new-server"].value;
+    const label = serverUrl.match(/:(?:\/\/)?([^\.]+)/)[1];
+    urls.push({label:label, value:serverUrl});
+    serverList.innerHTML += `<option value="${urls[urls.length-1].value}">${urls[urls.length-1].label}</option>`
+    form["new-server"].value = "";
+}
+
+
 updateDefinition.addEventListener('click', () => updateDefinitionText());
 updateResponse.addEventListener('click', () => updateResponseValues(responseType));
 actionSynonym.addEventListener('click', (event) => updateResponseValues("synonyms", event.currentTarget));
 actionPhraseAlternative.addEventListener('click', (event) => updateResponseValues("phrase_alternative", event.currentTarget));
 actionPhraseEquivalent.addEventListener('click', (event) => updateResponseValues("phrase_equivalent", event.currentTarget));
+buttonAddServer.addEventListener('click', (event) => addServer(event));
+
+document.addEventListener('keydown', function(event) {
+  // Verificamos si se presiona Ctrl + Shift + E
+  if (event.ctrlKey && event.shiftKey && event.key === 'E') {
+    event.preventDefault(); // evita conflictos (por ejemplo si el navegador tiene un atajo igual)
+    showMenuServer();
+  }
+});
+
+serverList.innerHTML = `<option selected value="${urls[0].value}">${urls[0].label}</option><option value="${urls[1].value}">${urls[1].label}</option>`
 
 async function main() {
     buttonGenerator.classList.add("disabled");
