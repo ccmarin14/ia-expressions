@@ -182,8 +182,7 @@ const buildResponseContainer = (data, response_type) => {
         case "phrase_equivalent":
             const phrase = extractPhrase(data);
             const highlightedPhrase = highlightWord(phrase.phrase);
-            const highlightedTranslation = highlightWord(phrase.translation);
-            build.response = `<b>Frase: </b><span>${highlightedPhrase}</span><br><b>Traducción: </b><span>${highlightedTranslation}</span><br>`;
+            build.response = `<b>Frase: </b><span>${highlightedPhrase}</span><br><b>Traducción: </b><span>${phrase.translation}</span><br>`;
             break;      
         default:
             return "";
